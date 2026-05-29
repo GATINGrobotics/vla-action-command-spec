@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gate Decision",
+  "type": "object",
+  "required": ["decision", "reason", "action_id"],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": ["ALLOW", "DENY", "MODIFY"]
+    },
+    "reason": { "type": "string" },
+    "action_id": { "type": "string" },
+    "audit_id": { "type": "string" },
+    "modified_command": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
