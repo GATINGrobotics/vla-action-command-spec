@@ -1,0 +1,12 @@
+examples/
+  action-command.example.json
+  robot-context.example.json
+  gate-decision.example.json
+
+schemas/
+  action-command.schema.json
+  robot-context.schema.json
+  gate-decision.schema.json
+
+PATENT_NOTICE.md
+README.md
