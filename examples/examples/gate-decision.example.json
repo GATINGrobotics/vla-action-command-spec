@@ -1,0 +1,6 @@
+{
+  "decision": "ALLOW",
+  "reason": "command satisfies reference policy",
+  "action_id": "cmd-001",
+  "audit_id": "gate-20260528-0001"
+}
