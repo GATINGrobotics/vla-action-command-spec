@@ -1,0 +1,5 @@
+schemas/robot-context.schema.json
+schemas/gate-decision.schema.json
+examples/action-command.example.json
+examples/robot-context.example.json
+examples/gate-decision.example.json
