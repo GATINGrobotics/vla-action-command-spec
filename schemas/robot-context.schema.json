@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Robot Context",
+  "type": "object",
+  "required": ["robot_state", "environment", "policy"],
+  "properties": {
+    "robot_state": {
+      "type": "object",
+      "properties": {
+        "battery_percent": { "type": "number" },
+        "emergency_stop": { "type": "boolean" },
+        "current_role": { "type": "string" }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "human_distance_m": { "type": "number" },
+        "workspace_bounds": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+            "y": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+            "z": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 }
+          }
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "allowed_actions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "denied_actions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "min_human_distance_m": { "type": "number" },
+        "min_battery_percent": { "type": "number" },
+        "max_velocity_mps": { "type": "number" },
+        "max_force_n": { "type": "number" },
+        "max_torque_nm": { "type": "number" }
+      }
+    }
+  }
+}
